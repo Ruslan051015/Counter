@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        figureImageView.image = UIImage(systemName: "figure.mixed.cardio")
+        figureImageView.image = UIImage(systemName: "figure.arms.open")
         counterLabel.text = "Значение счётчика: 0"
        
     }
@@ -28,9 +28,9 @@ class ViewController: UIViewController {
         counter += 1
         counterLabel.text = "Значение счётчика: \(counter)"
         if isHandsRaised {
-            figureImageView.image = UIImage(systemName: "figure.mixed.cardio")
-        } else {
             figureImageView.image = UIImage(systemName: "figure.arms.open")
+        } else {
+            figureImageView.image = UIImage(systemName: "figure.mixed.cardio")
         }
         isHandsRaised.toggle()
         
