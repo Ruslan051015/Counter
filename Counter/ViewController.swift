@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var figureImageView: UIImageView!
     @IBOutlet weak var incrementCounterButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var counterLabel: UILabel!
    
     override func viewDidLoad() {
@@ -36,5 +37,9 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func resetCounter(_ sender: Any) {
+        counter = 0
+        counterLabel.text = "Значение счётчика: \(counter)"
+    }
 }
 

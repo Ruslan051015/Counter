@@ -26,17 +26,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="eRl-7u-HcA">
-                                <rect key="frame" x="20" y="129" width="353" height="205.33333333333337"/>
+                                <rect key="frame" x="20" y="129" width="353" height="205.33333333333331"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <imageReference key="image" image="figure.arms.open" catalog="system" variableValue="1"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSW-gr-XTe">
-                                <rect key="frame" x="71" y="659" width="250" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSW-gr-XTe">
+                                <rect key="frame" x="50" y="678" width="293" height="50"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Прыг-скок!"/>
                                 <connections>
                                     <action selector="incrementCounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GL7-DT-HrZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LC2-6R-9vy">
+                                <rect key="frame" x="147" y="738" width="98" height="34"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Сбросить"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Сбросить">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleCallout"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetCounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CVW-9O-Mdj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -44,19 +54,28 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eRl-7u-HcA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4xe-aN-lXD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LC2-6R-9vy" secondAttribute="trailing" constant="148" id="5sk-FU-0m2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eRl-7u-HcA" secondAttribute="trailing" constant="20" id="6xc-tU-tJE"/>
                             <constraint firstItem="230-tu-JVK" firstAttribute="top" secondItem="eRl-7u-HcA" secondAttribute="bottom" constant="70" id="8uj-LJ-MyK"/>
                             <constraint firstItem="230-tu-JVK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9gQ-eA-CKK"/>
+                            <constraint firstItem="cSW-gr-XTe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="GCe-O2-oXx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cSW-gr-XTe" secondAttribute="bottom" constant="90" id="Kod-ee-Kxw"/>
+                            <constraint firstItem="cSW-gr-XTe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="619" id="OUo-iV-N1E"/>
                             <constraint firstItem="230-tu-JVK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="345" id="STf-1d-BqH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LC2-6R-9vy" secondAttribute="bottom" constant="46" id="aER-7w-Bzh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="230-tu-JVK" secondAttribute="bottom" constant="370" id="h2x-eF-abF"/>
                             <constraint firstItem="eRl-7u-HcA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="iSb-Ug-pNV"/>
+                            <constraint firstItem="LC2-6R-9vy" firstAttribute="top" secondItem="cSW-gr-XTe" secondAttribute="bottom" constant="10" id="pfg-bg-Cdo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="230-tu-JVK" secondAttribute="trailing" constant="20" id="qE4-9D-MSx"/>
+                            <constraint firstItem="LC2-6R-9vy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="147" id="uSQ-hy-mHZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cSW-gr-XTe" secondAttribute="trailing" constant="50" id="vpF-Hz-1XF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="counterLabel" destination="230-tu-JVK" id="sgP-EV-3BX"/>
                         <outlet property="figureImageView" destination="eRl-7u-HcA" id="ckN-et-uF1"/>
                         <outlet property="incrementCounterButton" destination="cSW-gr-XTe" id="M1P-sQ-JzL"/>
+                        <outlet property="resetButton" destination="LC2-6R-9vy" id="Da8-rZ-i0g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
